@@ -1,0 +1,89 @@
+﻿@model EcommerceWebApp.ViewModel.Register
+
+<html>
+<head>
+    <style>
+        #contact {
+            position: relative;
+        }
+
+            #contact::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                opacity: 0.7;
+                background: url('contact-01.jpg') no-repeat center center/cover;
+            }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+            #contact-box input,
+            #contact-box textarea {
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 9px;
+                font-size: 1.1rem;
+            }
+
+            #contact-box form {
+                width: 40%;
+            }
+
+            #contact-box label {
+                font-size: 1.3rem;
+                font-family: 'Bree Serif', serif;
+            }
+
+        .h-primary {
+            font-family: 'Bree Serif', serif;
+            font-size: 3.8rem;
+            padding: 12px;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="phone.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Bree+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="contact">
+        <h1 class="h-primary center" text-align="center">Register</h1>
+        <div id="contact-box">
+            @using (Html.BeginForm("SubmitData", "Register"))
+            {
+                <div class="form-group">
+                    <label for="name">FirstName: </label>
+                    @Html.TextBoxFor(x => x.FirstName)
+                </div>
+                <div class="form-group">
+                    <label for="phone">LastName: </label>
+                    @Html.TextBoxFor(x => x.LastName)
+                </div>
+                <div class="form-group">
+                    <label for="phone">Gender: </label>
+                    @Html.TextBoxFor(x => x.Gender)
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    @Html.TextBoxFor(x => x.Email)
+                </div>
+
+                <div>
+                    <input type="submit" class="btn btn-primary" />
+                </div>
+            }
+
+
+
+        </div>
+    </section>
+</body>
+
+</html>

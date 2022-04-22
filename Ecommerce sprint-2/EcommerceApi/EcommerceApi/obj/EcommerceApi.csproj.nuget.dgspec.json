@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\svdsk25\\Desktop\\Case-Study\\Group-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj": {}
+    "C:\\Users\\Mahesh\\Desktop\\demo\\Ecommerce sprint-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\svdsk25\\Desktop\\Case-Study\\Group-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj": {
+    "C:\\Users\\Mahesh\\Desktop\\demo\\Ecommerce sprint-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\svdsk25\\Desktop\\Case-Study\\Group-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj",
+        "projectUniqueName": "C:\\Users\\Mahesh\\Desktop\\demo\\Ecommerce sprint-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj",
         "projectName": "EcommerceApi",
-        "projectPath": "C:\\Users\\svdsk25\\Desktop\\Case-Study\\Group-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj",
-        "packagesPath": "C:\\Users\\svdsk25\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\svdsk25\\Desktop\\Case-Study\\Group-2\\EcommerceApi\\EcommerceApi\\obj\\",
+        "projectPath": "C:\\Users\\Mahesh\\Desktop\\demo\\Ecommerce sprint-2\\EcommerceApi\\EcommerceApi\\EcommerceApi.csproj",
+        "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mahesh\\Desktop\\demo\\Ecommerce sprint-2\\EcommerceApi\\EcommerceApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\svdsk25\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +81,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
