@@ -10,7 +10,7 @@ namespace EcommerceWebApp.Controllers
 {
     public class RegisterController : Controller
     {
-        EcommerceDbContext _ecommerceDbContext;
+        ShoppingCartT4Context _ecommerceDbContext;
         public RegisterController(EcommerceDbContext ecommerceDbContext)
         {
             _ecommerceDbContext = ecommerceDbContext;

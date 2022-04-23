@@ -8730,19 +8730,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Upendra Chary\\.nuget\\packages\\": {}
+    "C:\\Users\\Mahesh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Upendra Chary\\Downloads\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Mahesh\\Desktop\\demo\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp.csproj",
       "projectName": "EcommerceWebApp",
-      "projectPath": "C:\\Users\\Upendra Chary\\Downloads\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp.csproj",
-      "packagesPath": "C:\\Users\\Upendra Chary\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Upendra Chary\\Downloads\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\obj\\",
+      "projectPath": "C:\\Users\\Mahesh\\Desktop\\demo\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp.csproj",
+      "packagesPath": "C:\\Users\\Mahesh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mahesh\\Desktop\\demo\\EcommerceWebApp\\EcommerceWebApp\\EcommerceWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Upendra Chary\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mahesh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8809,7 +8809,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

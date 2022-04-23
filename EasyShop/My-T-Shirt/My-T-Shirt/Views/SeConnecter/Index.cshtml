@@ -1,0 +1,76 @@
+﻿@model My_T_Shirt.Models.Utilisateur
+@{
+    ViewBag.Title = "Se connecter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    label.error {
+        color: var(--danger);
+        margin-top: 3px;
+    }
+</style>
+<div class="container">
+    <div class="justify-content-center d-flex mt-5">
+        <div class="card mt-5" style="width:35rem;">
+            <div class="card-body">
+                <div class="justify-content-center d-flex">
+                    <h5>Log in here!</h5>
+                </div>
+                @if (ViewBag.error != "")
+                {
+                    <div class="alert alert-danger">
+                        <h5  class="justify-content-center d-flex">@ViewBag.error</h5>
+                    </div>
+                }
+                @using (Html.BeginForm("", "SeConnecter", FormMethod.Post, new { id = "frmLogin" }))
+                {
+                    <div class="form-group">
+                        <label>Email </label>
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" , @autocomplete = "off" })
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        @Html.TextBoxFor(m => m.MotDePasse, new { @class = "form-control", @type = "password",  })
+
+                    </div>
+
+                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                    <div class="justify-content-center d-flex mt-2 mb-2">
+                        <a href="/Inscription">Register!!</a>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#frmLogin').validate({
+                rules: {
+                   
+                    Email: {
+                        required:true,
+                    },
+                    MotDePasse: {
+                        required: true,
+                       
+                    },
+                    
+                },
+                messages: {
+                    
+                    Email: {
+                        required:"you have to enter the email"
+                    },
+                    MotDePasse: {
+                        required: "if you have to enter the password",
+                       
+                    },
+                }
+            });
+
+        });
+    </script>
+}

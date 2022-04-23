@@ -1,0 +1,142 @@
+﻿@model My_T_Shirt.Models.Produit
+@{
+    ViewBag.Title = "Ajouter Produit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+    var lstMarques = (List<My_T_Shirt.Models.Marque>)ViewData["marques"];
+}
+<style>
+    textarea {
+        min-height: 150px;
+        resize: none
+    }
+
+    
+
+    label.error {
+        color: var(--danger);
+        margin-top: 3px;
+    }
+
+</style>
+<div class="container pl-5 pr-5">
+    <div class="pl-5 pr-5 m-5">
+        @if (ViewBag.exception != "")
+        {
+            <div class="alert alert-dismissible alert-danger">
+                <p>@ViewBag.exception</p>
+            </div>
+        }
+        @using (Html.BeginForm("AjouterProduit", "Admin", FormMethod.Post, new { enctype = "multipart/form-data", id = "frmAjouter" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                @Html.LabelFor(model => model.Nom, htmlAttributes: new { @class = "form-label" })
+                @Html.TextBoxFor(model => model.Nom, new { @class = "form-control", @placeholder = "Your Product Name", @autocomplete = "off" })
+            </div>
+            <div class="form-group">
+                <label>choose another brand :</label>
+                <select id="idMarque" name="idMarque" class="form-control">
+                    <option value="">
+                        ---select a brand ---
+                    </option>
+                    @foreach (var marque in lstMarques)
+                    {
+                        <option value="@marque.IdMarque">@marque.Nom</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Prix, htmlAttributes: new { @class = "form-label" })
+                @Html.TextBoxFor(model => model.Prix, new { @class = "form-control", @placeholder = "Enter the Price", @type = "number", @autocomplete = "off" })
+            </div>
+            @*<div class="form-group">
+                <label class="form-label">Quantite stock</label>
+                @Html.TextBoxFor(model => model.QteStock, new { @class = "form-control", @placeholder = "introduire la quantite en stock", @type = "number", @autocomplete = "off" })
+            </div>*@
+            <div class="form-group">
+                <label class="form-label">Image</label>
+                <input type="file" class="form-control" name="upload" accept=".jpg,.jpeg,.png,.svg" />
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "form-label" })
+                @Html.TextAreaFor(model => model.Description, htmlAttributes: new { @class = "form-control", @placeholder = "Enter Description", @autocomplete = "off" })
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="Genre" id="rad-homme" value="Homme" checked="">
+                    Male
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="Genre" id="rad-femme" value="Femme">
+                    Female
+                </label>
+            </div>
+            <div>
+                <button class="btn btn-primary btn-block mt-3" type="submit">Add</button>
+            </div>
+
+        }
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#frmAjouter").validate({
+                rules: {
+                    Nom: {
+                        required:true
+                    },
+                    idMarque: {
+                        required: true
+
+                    },
+                    Prix: {
+                        required: true
+
+                    },
+                    QteStock: {
+                        required: true
+
+                    },
+                    upload: {
+                        required: true
+
+                    },
+                    Description: {
+                        required: true
+
+                    }
+                },
+                messages:{
+                    Nom: {
+                        required: "Enter correct Name "
+                    },
+                    idMarque: {
+                        required: "Select correct ID"
+
+                    },
+                    Prix: {
+                        required: "Select price"
+
+                    },
+                    QteStock: {
+                        required: "Quantity of stock"
+
+                    },
+                    upload: {
+                        required: "Choose the picture"
+
+                    },
+                    Description: {
+                        required: "Complete the description"
+
+                    }
+                }
+            })
+        });
+    </script>
+}

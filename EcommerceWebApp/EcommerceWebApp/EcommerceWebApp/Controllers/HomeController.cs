@@ -18,10 +18,10 @@ namespace EcommerceWebApp.Controllers
         {
             return View();
         }
-        //[HttpGet]
-        //public IEnumerable<TblCategory> GetCategories()
-        //{
-        //    return _ecommerceDbContext.TblCategories.ToList();
-        //}
+        [HttpGet]
+        public IEnumerable<TblCategory> GetCategories()
+        {
+            return _ecommerceDbContext.TblCategories.ToList();
+        }
     }
 }
